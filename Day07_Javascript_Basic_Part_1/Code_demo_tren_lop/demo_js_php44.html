@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Javascript PHP 44</title>
+</head>
+<body>
+	<!-- Khai báo Javascript -->
+	<!-- 1 - KHai báo thẳng trong thẻ HTML -->
+	<a onclick="document.write('Hello world');">
+		Click để show đoạn text Hello world
+	</a>
+	<br />
+
+	<!-- 2 - Nhúng thẳng trong file .html -->
+	<!-- thông thường các bạn sẽ nhúng ở trước thẻ đóng body -->
+	<script type="text/javascript">
+		var name = 'Mạnh';
+		document.write('Hello ' + name);
+	</script>
+
+	<!-- 3 - Nhúng từ file .js bên ngoài-->
+	<script src="js/main.js"></script>
+
+	<!-- Chường trình Javascript đầu tiên -->
+	<script type="text/javascript">
+		document.write("<h1>Hello Javascript</h1>");
+	</script>
+
+	<!-- Các khái niệm cơ bản trong lập trình -->
+	<!-- BIẾN - Variable -->
+	<script type="text/javascript">
+		var name = "Mạnh";
+		var age = 29;
+		var address = "Hà Nội";
+		var var1, var2;
+		var var3 = 1, var4 = true;
+		document.write("<br />");
+		document.write("Tên của tôi: " + name);
+		document.write("<br />");
+		document.write("Tuổi của tôi: " + age);
+		document.write("<br />");
+		document.write("Địa chỉ: " + address);
+		// quy tắc khai báo biến
+		// các tên biến sai
+		// var 4abc; 
+		// var abc%t; 
+		var $abc;
+		// var if, else, for;
+		var _abc, _Abc;
+
+
+		//
+		var username = "nvmanh";
+		var password = 123456;
+		var undefined = null;
+
+		var name = 'Mạnh', age = 29, address = "Hà Nội";
+		document.write("Tên: " + name + "<br /> Tuổi: " + age + "<br /> Địa chỉ: " + address);
+
+		// HẰNG
+		const PI = 3.14;
+		document.write("<br />");
+		document.write("Số PI = " + PI);
+		//dòng dưới báo lỗi do không thể gán lại giá trị cho hằng
+		// PI = 1;
+		// document.write("Số PI sau khi gán lại = " + PI);
+
+		// Kiểu dữ liệu trong javascript
+		// - Kiểu Number
+		var number1 = -345;
+		document.write("<br />");
+		document.write("Biến number1 có kiểu dữ liệu là: " + typeof number1);
+
+		// - Kiểu String
+		var string1 = 'Hello';
+		var string2 = "Hello";
+		var string3 = "Hello 'Mạnh'";
+		document.write("<br />");
+		document.write("Biến string1 có kiểu dữ liệu là: " + typeof string1);
+		document.write("<br />");
+		document.write("String3 = " + string3);
+
+		// Kiểu Boolean
+		// chỉ gồm 2 giá trị duy nhất là true và false viết thường
+		var booleanTrue = true;
+		var booleanFalse = false;
+		document.write("<br />");
+		document.write("Biến booleanTrue có giá trị là: " + booleanTrue);
+		document.write("Biến booleanTrue có kiểu dữ liệu là: " + typeof booleanTrue);
+		document.write("<br />");
+		document.write("Biến booleanFalse có giá trị là: " + booleanFalse);
+		document.write("Biến booleanFalse có kiểu dữ liệu là: " + typeof booleanFalse);
+
+		// - Undefined
+		var x;
+		document.write("<br />");
+		document.write("Biến x có kiểu dữ liệu là: " + typeof x);
+
+		// Array - Mảng
+		// mảng trong javascript được coi là 1 object
+		var arr1 = [1, 'abc', true, undefined, [1, 2, 3]];
+		document.write("<br />");
+		document.write("Biến arr1 có kiểu dữ liệu là: " + typeof arr1);
+
+		//Object - Đối tượng
+		var obj1 = {
+			name: "Mạnh",
+			age: 29,
+			code: function () {
+				document.write("Hello");
+			}
+		}
+		document.write("<br />");
+		document.write("Biến obj1 có kiểu dữ liệu là: " + typeof obj1);
+
+		// Hàm - Function
+		//  - Hàm có sẵn
+		// write
+		// - Hàm tự định nghĩa
+		// hàm không có tham số
+		function display() {
+			document.write("Nội dung hiển thị trong hàm display");
+		}
+
+		//goi hàm
+		display();
+
+		//Xây dựng 1 HÀM của riêng bạn, có nhiệm vụ hiển thị tên, tuổi của bạn
+		function show() {
+			var name = "Mạnh";
+			var age = 12;
+			document.write("<br />");
+			document.write("Tên: " + name);
+			document.write("<br />");
+			document.write("Tuổi: " + age);
+		}
+
+		// function show1() {
+		// 	var name = "Tú";
+		// 	var age = 11;
+		// 	document.write("<br />");
+		// 	document.write("Tên: " + name);
+		// 	document.write("<br />");
+		// 	document.write("Tuổi: " + age);
+		// }
+
+		show();
+
+		// Hàm có tham số
+		function showInfo(name, age) {
+			document.write('<br />');
+			document.write("Name: " + name);
+			document.write('<br />');
+			document.write("Age: " + age);
+		}
+
+		showInfo('Manh', 12);
+		showInfo('Tú', 13);
+
+		//hàm có tham số với giá trị mặc định
+		function sum(a = 1, b = 2) {
+			document.write("Tổng 2 số là" + (a + b));
+		}
+
+		sum();
+		sum(3, 5);
+
+		//hàm có giá trị trả về
+		//khi gặp lệnh return, đồng nghĩa với việc thoát khỏi hàm, và các lệnh phía sau return sẽ không được thực thi
+		//khi có lệnh return, hàm sẽ giống như giá trị của 1 biến
+		function multiple(a, b) {
+			var multiple = a * b;
+			return multiple;
+
+			document.write("Đoạn text này nằm sau return sẽ không được hiển thị");
+		}
+
+		var multipleVar = multiple(2, 3);
+		document.write("<br />");
+		document.write(multipleVar);
+		multipleVar++;
+		document.write("<br />");
+		document.write(multipleVar);
+
+		//Một số hàm đc xây dựng sẵn trong Javascript
+		document.write("show nội dung");
+
+		var x = 5;
+		//chuyên dung để debug - tìm và fix lỗi
+		console.log("Kiểu dữ liệu của x = " + typeof x);
+
+		//xuất hiện hộp thoại cảnh báo
+		// alert("Cảnh báo");
+
+		//xuất hiện hộp thoại cho phép nhập dữ liệu,
+		// có thể gán biến để chứa kết quả nhận được từ việc nhập
+		// var number1 = prompt("Nhập số a = ");
+		// var number2 = prompt("Nhập số b = ");
+		// // console.log(typeof number1, typeof number2);
+		// //trong javascript, mọi dũ liệu từ ô nhập đều có kiểu dữ liệu là string, kể cả khi có nhập dữ liệu là 1 số 
+		// //để thao tác với số từ ô nhập liệu, cần ép kiểu
+		// number1 = parseInt(number1);
+		// number2 = parseInt(number2);
+		// var sum = number1 + number2;
+		// document.write("Tổng của number1 và number2 = " + sum);
+	</script>
+
+	<a href="#abc" title="Link Google" id="link" style="color: red">
+		<span style="color:red">
+		Click để show thông tin
+		</span>
+	</a>
+
+	<a href="#" id="link1" style="background: red; color: #fff">
+		Text bất kỳ
+	</a>
+
+	<script type="text/javascript">
+
+		var link1 = document.getElementById('link1');
+		//set giá trị
+		link1.href = "http://google.com.vn";
+		link1.title = "New title";
+		link1.innerHTML = "New text";
+
+		//lấy ra đối tượng dựa vào id 
+		//lấy ra các giá trị
+		var link = document.getElementById('link');
+		document.write("<br />");
+		document.write("Giá trị của thuộc tính href = " + link.href);
+		document.write("<br />");
+		document.write("Giá trị của thuộc tính title = " + link.title);
+		document.write("<br />");
+		document.write("Giá trị của thuộc tính id = " + link.id);
+		document.write("<br />");
+		document.write("Giá trị của thuộc tính style = " + link.style);
+		document.write("<br />");
+		document.write("Giá trị text bên trong khi lấy cả HTML = " + link.innerHTML);
+		document.write("Giá trị text bên trong khi chỉ lấy text = " + link.innerText);
+	</script>
+
+	<a href="http://google.vn" onclick="return changeColor();" id="change-color">
+		Click để đổi màu
+	</a>
+	<script type="text/javascript">
+		// SỰ KIÊN TRONG JAVASCRIPT
+		function changeColor() {
+			var changeColor = document.getElementById('change-color');
+			changeColor.style = "color: red";
+
+			return false;
+		}
+	</script>
+
+	<h1>Ví dụ demo</h1>
+	<form action="" method="post" onsubmit="return showInfo();">
+		Name: <input type="text" id="name" />
+		<br />
+		<input type="submit" value="Hiển thị thông tin" />
+	</form>
+	<div id="result" style="color: green">
+		
+	</div>
+
+	<script type="text/javascript">
+		function showInfo() {
+			var nameObj = document.getElementById('name');
+			var name = nameObj.value;
+			// document.write("Name: " + name);
+
+			var resultObj = document.getElementById('result');
+			resultObj.innerHTML = "Name: " + name;
+			//bắt buộc phải return false để ngăn ngừa form submit
+			return false;
+		}
+	</script>
+</body>
+</html>

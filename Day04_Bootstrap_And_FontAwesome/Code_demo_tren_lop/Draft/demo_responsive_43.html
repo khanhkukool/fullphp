@@ -1,0 +1,71 @@
+<!DOCTYPE html />
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Demo responsive</title>
+		<style type="text/css">
+			input[type=text] {
+				width: 900px;
+				height: 40px;
+				margin-bottom: 20px;
+			}
+			input[type=password] {
+				width: 1000px;
+				height: 40px;
+			}
+
+			/* Với các thiết bị Mobile, max-width = 767px */
+			/* Với các thiết bị Ipad/Tablet, min-width = 768px và max-width = 1022px*/
+			/* Với các thiết bị Mobile, min-width = 1023px */
+
+			/* css cho PC */ 
+			@media (min-width: 1023px) {
+				/* viết css bình thương */
+				/* các css tại đây chỉ ăn với pc */
+			}
+
+			/* CSS cho ipad/tablet */
+			@media (min-width: 768px) and (max-width: 1022px) {
+				/* viết css bình thương */
+				/* các css tại đây chỉ ăn với ipad/tablet */
+				input[type=text], input[type=password] {
+					width: 100%;
+				}
+			}
+
+			/* CSS cho mobile */
+			@media (max-width: 767px) {
+				/* viết css bình thương */
+				/* các css tại đây chỉ ăn với mobile */
+				/* h1 {
+					font-size: 60px;
+				} */
+				input[type=text], input[type=password] {
+					width: 100%;
+				}
+			}
+
+			/* @media(max-width: 1022px) {
+				input[type=text], input[type=password] {
+					width: 100%;
+				}
+			} */
+
+			
+
+			
+		</style>
+	</head>
+	<body>
+		<!-- DEMO REPSONSIVE -->
+		<h1>Form login</h1>
+		<form method="GET" action="">
+			Nhập username: <input type="text" name="username" placeholder="Nhập username" value="" />
+			<br />
+			Nhập password: <input type="password" name="password" placeholder="Nhập password" />
+			<br />
+			<input type="submit" value="Login" name="login" />
+		</form>
+	</body>
+</html>

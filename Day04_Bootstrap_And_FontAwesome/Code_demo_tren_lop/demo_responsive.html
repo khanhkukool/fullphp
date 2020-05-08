@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo responsive</title>
+	<style type="text/css">
+		input {
+			width: 1400px;
+		}
+
+		/* FOR PC */
+		@media(min-width: 1023px) {
+			/* CSS tại đây sẽ ăn với màn hình PC trở lên */
+			input {
+				background: red;
+				width: 100%;
+			}
+		}
+
+		/* FOR IPAD/TABLET */
+		@media(min-width: 768px) and (max-width: 1022px) {
+			/* CSS tại đây sẽ ăn với màn hình Ipad/Tablet */
+			input {
+				background: yellow;
+				width: 100%;
+			}
+		}
+
+		/* FOR MOBILE */
+		@media(max-width: 767px) {
+			/* CSS tại đây sẽ ăn với màn hình Mobile */
+			input {
+				background: blue;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="get">
+		Username: <input type="text" />
+		<br />
+		<br />
+		Password: <input type="password" />
+		<br />
+		<br />
+		<input type="submit" value="Login" />
+	</form>
+</body>
+</html>

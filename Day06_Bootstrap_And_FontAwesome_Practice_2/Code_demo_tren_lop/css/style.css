@@ -1,0 +1,116 @@
+/* CSS BT 7 day 4 */
+.bt7 .header-top {
+	background: #007669;
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 5px;
+}
+
+.bt7 .header-center {
+	background: #009788;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    font-size: 20px;
+}
+
+.bt7 .header-center i {
+	margin-right: 2px;
+}
+
+.bt7 .header-bottom {
+	text-align: right;
+}
+
+.bt7 .header-bottom .fa-bars {
+	background: #072945;
+    color: #fff;
+    padding: 4px 8px;
+    margin-top: 6px;
+    border-radius: 4px;
+}
+
+.bt7 .main-heading {
+	text-align: center;
+    font-size: 20px;
+    background: #009788;
+    color: #fff;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+.bt7 .main-p1 {
+	padding-left: 15px;
+    line-height: 24px;
+}
+
+.bt7 .main-img {
+	width: 100%;
+}
+
+.bt7 .hand-craft {
+	background: #000;
+    color: #fff;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.bt7 .readmore {
+	background: #009788;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.bt7 .footer {
+	background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    line-height: 26px;
+    font-size: 18px;
+}
+
+.bt7 .main {
+	margin-top: 20px;
+}
+
+@media(min-width: 1023px) {
+	.bt7 .header-top {
+		text-align: center;
+	}
+}
+
+
+.bt8 .header {
+	background: #87509c;
+    padding: 10px;
+}
+
+.bt8 .header-menu-content ul li, .header-img-content {
+	display: inline-block;
+}
+
+.bt8 .header-menu-content {
+	float: right;
+	margin-top: 12px;
+}
+
+.bt8 .header-menu-content ul li a {
+	color: #fff;
+    padding: 0 15px;
+    font-family: 'OpenSans-Bold-Custom';
+    font-size: 16px;
+}
+
+@font-face{
+	font-family: 'OpenSans-Bold-Custom';
+	src: url('../fonts/OpenSans-Bold.ttf');
+}
+
